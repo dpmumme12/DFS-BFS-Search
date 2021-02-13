@@ -27,10 +27,9 @@ def DFS(graph):
             
     return parent
 
-def DFS_helper(start,graph, parent):
+def DFS_helper(start, graph, parent):
     for vertex in graph[start]:
         if vertex not in parent:
-            print(vertex)
             parent[vertex] = start
             DFS_helper(vertex,graph, parent)
     
